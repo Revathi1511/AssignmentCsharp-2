@@ -84,6 +84,11 @@ namespace AssignmentCsharp.Controllers
             else
                 return 0;
         }
+        /// <summary>
+        /// This is going to calculate calorie of dessert
+        /// </summary>
+        /// <param name="dessert">calories calculated according to dessert</param>
+        /// <returns>the calorie value mentioned across each dessert</returns>
         private int GetDessertCalories(int dessert)
         {
             if (dessert == 1) //Apple Pie
