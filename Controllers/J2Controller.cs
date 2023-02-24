@@ -21,7 +21,7 @@ namespace AssignmentCsharp.Controllers
         {
             int numOfWays = GetNumOfWays(m, n, 10);
 
-            if (numOfWays == 1)
+            if (numOfWays == 1)  //this is to get the value 10 in one way
                 return $"There is 1 ways to get the sum 10";
 
             return $"There are {numOfWays} ways to get the sum 10";
@@ -37,7 +37,7 @@ namespace AssignmentCsharp.Controllers
         {
             int waysToRoll = 0;
 
-            for (int i = 1; i <= dice1Sides; i++)
+            for (int i = 1; i <= dice1Sides; i++)  //using for loop to get the possible probablities of the dices roll
             {
                 for (int j = 1; j <= dice2Sides; j++)
                 {
