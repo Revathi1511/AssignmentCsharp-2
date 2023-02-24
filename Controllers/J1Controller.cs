@@ -9,6 +9,14 @@ namespace AssignmentCsharp.Controllers
 {
     public class J1Controller : ApiController
     {
+        /// <summary>
+        /// this method calculates the calories of each menu described
+        /// </summary>
+        /// <param name="burger">to select the burger choice</param>
+        /// <param name="drink">to select the drink choice</param>
+        /// <param name="side">to select the sides</param>
+        /// <param name="dessert">to select the dessert</param>
+        /// <returns></returns>
         [HttpGet]
         [Route("api/J1/Menu/{burger}/{drink}/{side}/{dessert}")]
         public string Menu(int burger, int drink, int side, int dessert)
@@ -25,6 +33,12 @@ namespace AssignmentCsharp.Controllers
 
             return $"Your total calorie count is {totalCalories}";
         }
+
+        /// <summary>
+        /// This is going to calculate calorie of burger
+        /// </summary>
+        /// <param name="burger">calories calculated according to burger</param>
+        /// <returns>the calorie value mentioned across each burger</returns>
         private int GetBurgerCalorie(int burger)
         {
             if (burger == 1) //Cheese Burger
@@ -36,6 +50,12 @@ namespace AssignmentCsharp.Controllers
             else
                 return 0;
         }
+
+        /// <summary>
+        /// This is going to calculate calorie of drink
+        /// </summary>
+        /// <param name="drink">calories calculated according to drink</param>
+        /// <returns>the calorie value mentioned across each drink</returns>
         private int GetDrinkCalories(int drink)
         {
             if (drink == 1) //Soft Drink
@@ -47,6 +67,11 @@ namespace AssignmentCsharp.Controllers
             else
                 return 0;
         }
+        /// <summary>
+        /// This is going to calculate calorie of side
+        /// </summary>
+        /// <param name="side">calories calculated according to side</param>
+        /// <returns>the calorie value mentioned across each side</returns>
         private int GetSideCalories(int side)
         {
 
