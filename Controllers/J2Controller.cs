@@ -9,6 +9,12 @@ namespace AssignmentCsharp.Controllers
 {
     public class J2Controller : ApiController
     {
+        /// <summary>
+        /// this is going to take the number of ways to roll a dice
+        /// </summary>
+        /// <param name="m">side 1</param>
+        /// <param name="n">side 2</param>
+        /// <returns>10</returns>
         [HttpGet]
         [Route("api/J2/DiceGame/{m}/{n}")]
         public string Get(int m, int n)
@@ -20,6 +26,13 @@ namespace AssignmentCsharp.Controllers
 
             return $"There are {numOfWays} ways to get the sum 10";
         }
+
+        /// <summary>
+        /// this is going to take the different ways to roll a dice
+        /// </summary>
+        /// <param name="m">side 1</param>
+        /// <param name="n">side 2</param>
+        /// <returns>10</returns>
         private int GetNumOfWays(int dice1Sides, int dice2Sides, int targetValue)
         {
             int waysToRoll = 0;
